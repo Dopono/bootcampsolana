@@ -1,8 +1,3 @@
-import { Buffer } from "buffer";
-
-(window as any).global = window;
-(window as any).global.Buffer = Buffer;
-(window as any).process = { env: { }};
 {
   "name": "dopono",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
@@ -21,7 +16,7 @@ import { Buffer } from "buffer";
         "index": "apps/dopono/src/index.html",
         "browser": "apps/dopono/src/main.ts",
         "polyfills": [
-          "zone.js"
+          "zone.js", "./src/polyfills.ts"
         ],
         "tsConfig": "apps/dopono/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
